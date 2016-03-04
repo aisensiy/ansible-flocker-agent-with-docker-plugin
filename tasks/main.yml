@@ -63,7 +63,7 @@
 - name: Install ceph flocker driver
   command: /opt/flocker/bin/python setup.py install
   args:
-    chdir: /tmp/ceph-flocker-driver
+    chdir: /tmp/ceph_flocker_driver
 
 - name: Install python ceph lib
   command: /opt/flocker/bin/pip install python-cephlibs
