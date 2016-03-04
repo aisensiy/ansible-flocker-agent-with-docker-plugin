@@ -58,12 +58,12 @@
 - service: name=flocker-docker-plugin state=restarted
 
 - name: Clone ceph flocker driver
-  git: repo=https://github.com/aisensiy/ceph-flocker-driver.git dest=/tmp
+  git: repo=https://github.com/aisensiy/ceph-flocker-driver.git dest=/tmp/flocker-ceph-driver
 
 - name: Install ceph flocker driver
   command: /opt/flocker/bin/python setup.py install
   args:
-    chdir: /tmp/ceph_flocker_driver
+    chdir: /tmp/ceph-flocker-driver
 
 - name: Install python ceph lib
   command: /opt/flocker/bin/pip install python-cephlibs
